@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Contract</title>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/selects/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/icheck/icheck.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/icheck/custom.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/unslider.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/weather-icons/climacons.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/leaflet.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/daterange/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/datetime/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/pickadate/pickadate.css">
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-climacon.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/meteocons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/users.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/pickers/daterange/daterange.css">
+
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v1">
+    <!-- END: Custom CSS-->
+
+</head>
+
+<body>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title" id="basic-layout-tooltip">Contract Information</h4>
+
+            </div>
+            <div class="card-content collapse show">
+                <div class="card-body">
+
+
+
+                    <form class="form">
+                        <div class="form-body">
+
+                            <div class="form-group">
+                                <label for="customer "><span class="text-danger">* </span>Customer</label>
+                                <select class="select2 form-control" name="currency" id="currency" required>
+                                    <option ></option>
+                        
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject"><span class="text-danger">* </span>Subject</label>
+                                <input type="text" id="subject" class="form-control" 
+                                    name="openedby">
+                            </div><div class="form-group">
+                                <label for="contract">Contract Value</label>
+                                                        <fieldset>
+                                                            <div class="input-group flex-nowrap">
+                                                                <input type="number" name="value" class="form-control"
+                                                                    >
+                                                                <div class="input-group-append" id="button-addon2">
+                                                                    <button class="btn btn-primary" type="button"
+                                                                    
+                                                                        data-target="#default">$</button>
+
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                        
+
+                            <div class="form-group">
+                                <label for="contract">Contract type</label>
+                                                        <fieldset>
+                                                            <div class="input-group flex-nowrap">
+                                                                <select class="select2 form-control"id="group">
+
+                                                                    <option value=""></option>
+                                                                    <option value="AK">Alaska</option>
+                                                                    <option value="HI">Hawaii</option>
+
+                                                                </select>
+                                                                <div class="input-group-append" id="button-addon2">
+                                                                    <button class="btn btn-primary" type="button"
+                                                                        data-toggle="modal"
+                                                                        data-target="#default">+</button>
+
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                        <div class="modal fade text-left" id="default" tabindex="-1"
+                                                            role="dialog" aria-labelledby="myModalLabel1"
+                                                            aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title" id="myModalLabel1">
+                                                                            New contract Type</h4>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+
+                                                                        <label for="name"><span class="text-danger">*
+                                                                            </span>Name</label>
+                                                                        <input type="text" id="name"
+                                                                            class="form-control" name="name" required>
+
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button"
+                                                                            class="btn grey btn-outline-secondary"
+                                                                            data-dismiss="modal">Close</button>
+                                                                        <button type="button"
+                                                                            class="btn btn-outline-primary">Save
+                                                                            changes</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="issueinput3">Date Opened</label>
+                                        <input type="date" id="issueinput3" class="form-control" name="dateopened"
+                                            data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                                            data-title="Date Opened">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="issueinput4">Date Fixed</label>
+                                        <input type="date" id="issueinput4" class="form-control" name="datefixed"
+                                            data-toggle="tooltip" data-trigger="hover" data-placement="top"
+                                            data-title="Date Fixed">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <textarea class="form-control" id="description" rows="4"></textarea>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="form-actions center">
+                            <button type="reset" class="btn btn-warning mr-1">
+                                <i class="feather icon-x"></i> Cancel
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-check-square-o"></i> Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('.custom_date').pickadate();
+        })
+    </script>
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="app-assets/vendors/js/charts/leaflet/leaflet.js"></script>
+    <script src="app-assets/vendors/js/forms/icheck/icheck.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/jquery.knob.min.js"></script>
+    <script src="app-assets/vendors/js/charts/raphael-min.js"></script>
+    <script src="app-assets/vendors/js/charts/morris.min.js"></script>
+    <script src="app-assets/vendors/js/charts/jquery.sparkline.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/unslider-min.js"></script>
+    <script src="app-assets/vendors/js/charts/apexcharts/apexcharts.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/dateTime/moment-with-locales.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/dateTime/bootstrap-datetimepicker.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
+    <script src="app-assets/vendors/js/pickers/daterange/daterangepicker.js"></script>
+
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="app-assets/js/core/app-menu.js"></script>
+    <script src="app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/pages/dashboard-fitness.js"></script>
+    <script src="app-assets/js/scripts/pickers/dateTime/bootstrap-datetime.js"></script>
+    <script src="app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js"></script>
+    <!-- END: Page JS-->
+
+    <script>
+        $(document).ready(function () {
+            $('.select2').select2();
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker();
+        });
+    </script>
+
+</body>
+
+</html>
