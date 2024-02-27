@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Proposal</title>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/selects/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/icheck/icheck.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/icheck/custom.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/unslider.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/weather-icons/climacons.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/leaflet.css">
+
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/daterange/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/datetime/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/pickadate/pickadate.css">
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-climacon.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/meteocons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/users.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/pickers/daterange/daterange.css">
+
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v1">
+    <!-- END: Custom CSS-->
+
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-6 col-12 mb-1">
+                <h3 class="content-header-title">New Proposal</h3>
+            </div>
+        </div>
+        <div class="content-body">
+            <!-- Basic form layout section start -->
+            <section id="basic-form-layouts">
+                <div class="row match-height">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-content collapse show">
+                                <div class="card-body">
+                                    <form class="form">
+                                        <div class="form-body">
+                                            <div class="row">
+                                                <div class="col-md-6 border-right">
+                                                    <div class="form-group">
+                                                        <label for="subject"><span class="text-danger">*
+                                                            </span>Subject</label>
+                                                        <input type="text" id="subject" class="form-control"
+                                                            name="subject" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="releated"><span class="text-danger">* </span>
+                                                            Related</label>
+                                                        <select class="select2 form-control" name="related" id="related"
+                                                            required>
+                                                            <option value=""> Nothing selected</option>
+                                                            <option value="lead">Lead</option>
+                                                            <option value="customer">Customer</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group" id="customer_div" style="display: none">
+                                                        <label for="releated"><span class="text-danger">* </span>
+                                                            Customer</label>
+                                                        <select class="select2 form-control" name="customer"
+                                                            id="customer">
+                                                            <option value=""> Nothing selected</option>
+                                                            <option value="customer 1">customer 1</option>
+                                                            <option value="customer 2">Customer 2</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group" id="lead_div" style="display: none">
+                                                        <label for="releated"><span class="text-danger">* </span>
+                                                            Lead</label>
+                                                        <select class="select2 form-control w-100" name="lead"
+                                                            id="lead">
+                                                            <option value=""> Nothing selected</option>
+                                                            <option value="lead 1">lead 1</option>
+                                                            <option value="lead 2">lead 2</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Date </label>
+                                                                <div class='input-group date' id='datetimepicker1'
+                                                                    name="'date1">
+                                                                    <input type='text' class="form-control" />
+                                                                    <div class="input-group-append">
+                                                                        <span class="input-group-text">
+                                                                            <span class="fa fa-calendar"></span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Open till </label>
+                                                                <div class='input-group date' id='datetimepicker8'
+                                                                    name="'date2">
+                                                                    <input type='text' class="form-control" />
+                                                                    <div class="input-group-append">
+                                                                        <span class="input-group-text">
+                                                                            <span class="fa fa-calendar"></span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="currency"><span class="text-danger">*
+                                                                    </span>
+                                                                    Currency</label>
+                                                                <select class="select2 form-control" name="currency"
+                                                                    id="currency" required>
+                                                                    <option value=""></option>
+                                                                    <option value="1" selected="" data-subtext="$">
+                                                                        USD</option>
+                                                                    <option value="2" data-subtext="€">EUR</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="discounttype"> Discount type</label>
+                                                                <select class="select2 form-control" name="discounttype"
+                                                                    id="discounttype" required>
+                                                                    <option value=""></option>
+                                                                    <option value="1" selected="" data-subtext="$">
+                                                                        No Discount</option>
+                                                                    <option value="2" data-subtext="€">Before Tax
+                                                                    </option>
+                                                                    <option value="2" data-subtext="€">After Tax
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="status"><span class="text-danger">* </span>
+                                                                    Status</label>
+                                                                <select class="select2 form-control" name="status"
+                                                                    id="status" required>
+                                                                    <option value="6">Draft</option>
+                                                                    <option value="4">Sent</option>
+                                                                    <option value="1">Open</option>
+                                                                    <option value="5">Revised</option>
+                                                                    <option value="2">Declined</option>
+                                                                    <option value="3">Accepted</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="assigned"><span class="text-danger">*
+                                                                    </span>
+                                                                    Assigned</label>
+                                                                <select class="select2 form-control" name="assigned"
+                                                                    id="assigned" required>
+                                                                    <option value=""></option>
+                                                                    <option value="6">Ron Collins</option>
+                                                                    <option value="5">Reggie Bednar</option>
+                                                                    <option value="9">Reggie Gerlach</option>
+                                                                    <option value="3">Oliver Harvey</option>
+                                                                    <option value="1" selected="">Milo Kemmer
+                                                                    </option>
+                                                                    <option value="8">Landen Mayert</option>
+                                                                    <option value="10">Ferne Muller</option>
+                                                                    <option value="7">Domingo Nolan</option>
+                                                                    <option value="4">Dallas Zieme</option>
+                                                                    <option value="2">Alfredo Reichel</option>
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="to">To</label>
+                                                        <input type="text" id="to" class="form-control" placeholder="To"
+                                                            name="to">
+                                                    </div>
+                                                    <div class="form-group">
+
+                                                        <label for="address" class="form-label">Address</label>
+                                                        <textarea class="form-control" id="address" rows="3"></textarea>
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="city">City</label>
+                                                                <input type="text" id="city" class="form-control"
+                                                                    name="city">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="state">State</label>
+                                                                <input type="text" id="state" class="form-control"
+                                                                    name="state">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="country">Country</label>
+                                                                <input type="text" id="country" class="form-control"
+                                                                    name="country">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="state">Zip Code</label>
+                                                                <input type="text" id="state" class="form-control"
+                                                                    name="state">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="city">Email</label>
+                                                                <input type="text" id="city" class="form-control"
+                                                                    name="city">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="state">Phone</label>
+                                                                <input type="text" id="state" class="form-control"
+                                                                    name="state">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr class="col-12">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <fieldset>
+                                                                <div class="input-group">
+                                                                    <select class="select2 form-control">
+
+                                                                        <option value=""></option>
+                                                                        <option value="AK">Alaska</option>
+                                                                        <option value="HI">Hawaii</option>
+
+                                                                        <option value="CA">California</option>
+                                                                        <option value="NV">Nevada</option>
+                                                                        <option value="OR">Oregon</option>
+                                                                        <option value="WA">Washington</option>
+
+
+
+
+                                                                    </select>
+                                                                    <div class="input-group-append" id="button-addon2">
+                                                                        <button class="btn btn-primary" type="button"
+                                                                            data-toggle="modal"
+                                                                            data-target="#default">+</button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                            <div class="modal fade text-left" id="default" tabindex="-1"
+                                                                role="dialog" aria-labelledby="myModalLabel1"
+                                                                aria-hidden="true">
+                                                                <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h4 class="modal-title" id="myModalLabel1">
+                                                                                Add New Item</h4>
+                                                                            <button type="button" class="close"
+                                                                                data-dismiss="modal" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div
+                                                                                        class="alert alert-warning affect-warning hide">
+                                                                                        Changing item info won't affect
+                                                                                        on the created
+                                                                                        invoices/estimates/proposals/credit
+                                                                                        notes. </div>
+                                                                                    <div class="form-group"
+                                                                                        app-field-wrapper="description">
+                                                                                        <label for="description"
+                                                                                            class="control-label">
+                                                                                            <small
+                                                                                                class="req text-danger">*
+                                                                                            </small>Description</label><input
+                                                                                            type="text" id="description"
+                                                                                            name="description"
+                                                                                            class="form-control"
+                                                                                            value=""></div>
+                                                                                    <div class="form-group"
+                                                                                        app-field-wrapper="long_description">
+                                                                                        <label for="long_description"
+                                                                                            class="control-label">Long
+                                                                                            Description</label><textarea
+                                                                                            id="long_description"
+                                                                                            name="long_description"
+                                                                                            class="form-control"
+                                                                                            rows="4"></textarea></div>
+                                                                                    <div class="form-group">
+                                                                                        <label for="rate"
+                                                                                            class="control-label">
+                                                                                            <small
+                                                                                                class="req text-danger">*
+                                                                                            </small>
+                                                                                            Rate - USD <small>(Base
+                                                                                                Currency)</small></label>
+                                                                                        <input type="number" id="rate"
+                                                                                            name="rate"
+                                                                                            class="form-control"
+                                                                                            value="">
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label for="rate_currency_2"
+                                                                                            class="control-label">
+                                                                                            Rate - EUR</label>
+                                                                                        <input type="number"
+                                                                                            id="rate_currency_2"
+                                                                                            name="rate_currency_2"
+                                                                                            class="form-control"
+                                                                                            value=""
+                                                                                            aria-invalid="false">
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="form-group">
+                                                                                                <label
+                                                                                                    class="control-label"
+                                                                                                    for="tax">Tax
+                                                                                                    1</label>
+                                                                                                <div class="dropdown bootstrap-select display-block bs3 dropup"
+                                                                                                    style="width: 100%;">
+                                                                                                    <select
+                                                                                                        class="selectpicker display-block"
+                                                                                                        data-width="100%"
+                                                                                                        name="tax"
+                                                                                                        data-none-selected-text="No Tax"
+                                                                                                        tabindex="-98">
+                                                                                                        <option
+                                                                                                            value="">
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="3"
+                                                                                                            data-subtext="TAX3">
+                                                                                                            5.00%
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="2"
+                                                                                                            data-subtext="TAX2">
+                                                                                                            10.00%
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="1"
+                                                                                                            data-subtext="TAX1">
+                                                                                                            18.00%
+                                                                                                        </option>
+                                                                                                    </select><button
+                                                                                                        type="button"
+                                                                                                        class="btn dropdown-toggle btn-default bs-placeholder"
+                                                                                                        data-toggle="dropdown"
+                                                                                                        role="combobox"
+                                                                                                        aria-owns="bs-select-9"
+                                                                                                        aria-haspopup="listbox"
+                                                                                                        aria-expanded="false"
+                                                                                                        title="No Tax">
+                                                                                                        <div
+                                                                                                            class="filter-option">
+                                                                                                            <div
+                                                                                                                class="filter-option-inner">
+                                                                                                                <div
+                                                                                                                    class="filter-option-inner-inner">
+                                                                                                                    No
+                                                                                                                    Tax
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div><span
+                                                                                                            class="bs-caret"><span
+                                                                                                                class="caret"></span></span>
+                                                                                                    </button>
+                                                                                                    <div class="dropdown-menu open"
+                                                                                                        style="max-height: 443.688px; overflow: hidden; min-height: 118px;">
+                                                                                                        <div class="inner open"
+                                                                                                            role="listbox"
+                                                                                                            id="bs-select-9"
+                                                                                                            tabindex="-1"
+                                                                                                            aria-activedescendant="bs-select-9-0"
+                                                                                                            style="max-height: 433.688px; overflow-y: auto; min-height: 108px;">
+                                                                                                            <ul class="dropdown-menu inner "
+                                                                                                                role="presentation"
+                                                                                                                style="margin-top: 0px; margin-bottom: 0px;">
+                                                                                                                <li
+                                                                                                                    class="selected active">
+                                                                                                                    <a role="option"
+                                                                                                                        id="bs-select-9-0"
+                                                                                                                        tabindex="0"
+                                                                                                                        aria-setsize="4"
+                                                                                                                        aria-posinset="1"
+                                                                                                                        class="active selected"
+                                                                                                                        aria-selected="true"><span
+                                                                                                                            class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                            class="text"></span></a>
+                                                                                                                </li>
+                                                                                                                <li><a role="option"
+                                                                                                                        id="bs-select-9-1"
+                                                                                                                        tabindex="0"
+                                                                                                                        aria-setsize="4"
+                                                                                                                        aria-posinset="2"><span
+                                                                                                                            class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                            class="text">
+                                                                                                                            5.00%
+                                                                                                                            <small
+                                                                                                                                class="text-muted">TAX3</small></span></a>
+                                                                                                                </li>
+                                                                                                                <li><a role="option"
+                                                                                                                        id="bs-select-9-2"
+                                                                                                                        tabindex="0"
+                                                                                                                        aria-setsize="4"
+                                                                                                                        aria-posinset="3"><span
+                                                                                                                            class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                            class="text">
+                                                                                                                            10.00%
+                                                                                                                            <small
+                                                                                                                                class="text-muted">TAX2</small></span></a>
+                                                                                                                </li>
+                                                                                                                <li><a role="option"
+                                                                                                                        id="bs-select-9-3"
+                                                                                                                        tabindex="0"
+                                                                                                                        aria-setsize="4"
+                                                                                                                        aria-posinset="4"><span
+                                                                                                                            class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                            class="text">
+                                                                                                                            18.00%
+                                                                                                                            <small
+                                                                                                                                class="text-muted">TAX1</small></span></a>
+                                                                                                                </li>
+                                                                                                            </ul>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="form-group">
+                                                                                                <label
+                                                                                                    class="control-label"
+                                                                                                    for="tax2">Tax
+                                                                                                    2</label>
+                                                                                                <div class="dropdown bootstrap-select disabled display-block bs3 dropup"
+                                                                                                    style="width: 100%;">
+                                                                                                    <select
+                                                                                                        class="selectpicker display-block"
+                                                                                                        disabled=""
+                                                                                                        data-width="100%"
+                                                                                                        name="tax2"
+                                                                                                        data-none-selected-text="No Tax"
+                                                                                                        tabindex="-98">
+                                                                                                        <option
+                                                                                                            value="">
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="3"
+                                                                                                            data-subtext="TAX3">
+                                                                                                            5.00%
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="2"
+                                                                                                            data-subtext="TAX2">
+                                                                                                            10.00%
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="1"
+                                                                                                            data-subtext="TAX1">
+                                                                                                            18.00%
+                                                                                                        </option>
+                                                                                                    </select><button
+                                                                                                        type="button"
+                                                                                                        class="btn dropdown-toggle disabled bs-placeholder btn-default"
+                                                                                                        data-toggle="dropdown"
+                                                                                                        role="combobox"
+                                                                                                        aria-owns="bs-select-10"
+                                                                                                        aria-haspopup="listbox"
+                                                                                                        aria-expanded="false"
+                                                                                                        tabindex="-1"
+                                                                                                        aria-disabled="true"
+                                                                                                        title="No Tax">
+                                                                                                        <div
+                                                                                                            class="filter-option">
+                                                                                                            <div
+                                                                                                                class="filter-option-inner">
+                                                                                                                <div
+                                                                                                                    class="filter-option-inner-inner">
+                                                                                                                    No
+                                                                                                                    Tax
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div><span
+                                                                                                            class="bs-caret"><span
+                                                                                                                class="caret"></span></span>
+                                                                                                    </button>
+                                                                                                    <div class="dropdown-menu open"
+                                                                                                        style="max-height: 443.688px; overflow: hidden; min-height: 118px;">
+                                                                                                        <div class="inner open"
+                                                                                                            role="listbox"
+                                                                                                            id="bs-select-10"
+                                                                                                            tabindex="-1"
+                                                                                                            aria-activedescendant="bs-select-10-0"
+                                                                                                            style="max-height: 433.688px; overflow-y: auto; min-height: 108px;">
+                                                                                                            <ul class="dropdown-menu inner "
+                                                                                                                role="presentation"
+                                                                                                                style="margin-top: 0px; margin-bottom: 0px;">
+                                                                                                                <li
+                                                                                                                    class="selected active">
+                                                                                                                    <a role="option"
+                                                                                                                        id="bs-select-10-0"
+                                                                                                                        tabindex="0"
+                                                                                                                        aria-setsize="4"
+                                                                                                                        aria-posinset="1"
+                                                                                                                        class="active selected"
+                                                                                                                        aria-selected="true"><span
+                                                                                                                            class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                            class="text"></span></a>
+                                                                                                                </li>
+                                                                                                                <li><a role="option"
+                                                                                                                        id="bs-select-10-1"
+                                                                                                                        tabindex="0"><span
+                                                                                                                            class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                            class="text">
+                                                                                                                            5.00%
+                                                                                                                            <small
+                                                                                                                                class="text-muted">TAX3</small></span></a>
+                                                                                                                </li>
+                                                                                                                <li><a role="option"
+                                                                                                                        id="bs-select-10-2"
+                                                                                                                        tabindex="0"><span
+                                                                                                                            class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                            class="text">
+                                                                                                                            10.00%
+                                                                                                                            <small
+                                                                                                                                class="text-muted">TAX2</small></span></a>
+                                                                                                                </li>
+                                                                                                                <li><a role="option"
+                                                                                                                        id="bs-select-10-3"
+                                                                                                                        tabindex="0"><span
+                                                                                                                            class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                            class="text">
+                                                                                                                            18.00%
+                                                                                                                            <small
+                                                                                                                                class="text-muted">TAX1</small></span></a>
+                                                                                                                </li>
+                                                                                                            </ul>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix mbot15"></div>
+                                                                                    <div class="form-group"
+                                                                                        app-field-wrapper="unit"><label
+                                                                                            for="unit"
+                                                                                            class="control-label">Unit</label><input
+                                                                                            type="text" id="unit"
+                                                                                            name="unit"
+                                                                                            class="form-control"
+                                                                                            value=""></div>
+                                                                                    <div id="custom_fields_items">
+                                                                                    </div>
+                                                                                    <div class="form-group"
+                                                                                        app-field-wrapper="group_id">
+                                                                                        <label for="group_id"
+                                                                                            class="control-label">Item
+                                                                                            Group</label>
+                                                                                        <div class="dropdown bootstrap-select bs3 dropup"
+                                                                                            style="width: 100%;"><select
+                                                                                                id="group_id"
+                                                                                                name="group_id"
+                                                                                                class="selectpicker"
+                                                                                                data-width="100%"
+                                                                                                data-none-selected-text="Nothing selected"
+                                                                                                data-live-search="true"
+                                                                                                tabindex="-98">
+                                                                                                <option value="">
+                                                                                                </option>
+                                                                                                <option value="1">
+                                                                                                    Products</option>
+                                                                                                <option value="2">
+                                                                                                    Services</option>
+                                                                                            </select><button
+                                                                                                type="button"
+                                                                                                class="btn dropdown-toggle bs-placeholder btn-default"
+                                                                                                data-toggle="dropdown"
+                                                                                                role="combobox"
+                                                                                                aria-owns="bs-select-11"
+                                                                                                aria-haspopup="listbox"
+                                                                                                aria-expanded="false"
+                                                                                                data-id="group_id"
+                                                                                                title="Nothing selected">
+                                                                                                <div
+                                                                                                    class="filter-option">
+                                                                                                    <div
+                                                                                                        class="filter-option-inner">
+                                                                                                        <div
+                                                                                                            class="filter-option-inner-inner">
+                                                                                                            Nothing
+                                                                                                            selected
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div><span
+                                                                                                    class="bs-caret"><span
+                                                                                                        class="caret"></span></span>
+                                                                                            </button>
+                                                                                            <div class="dropdown-menu open"
+                                                                                                style="max-height: 603.237px; overflow: hidden; min-height: 55px;">
+                                                                                                <div
+                                                                                                    class="bs-searchbox">
+                                                                                                    <input type="search"
+                                                                                                        class="form-control"
+                                                                                                        autocomplete="off"
+                                                                                                        role="combobox"
+                                                                                                        aria-label="Search"
+                                                                                                        aria-controls="bs-select-11"
+                                                                                                        aria-autocomplete="list"
+                                                                                                        aria-activedescendant="bs-select-11-0">
+                                                                                                </div>
+                                                                                                <div class="inner open"
+                                                                                                    role="listbox"
+                                                                                                    id="bs-select-11"
+                                                                                                    tabindex="-1"
+                                                                                                    style="max-height: 538.237px; overflow-y: auto; min-height: 0px;">
+                                                                                                    <ul class="dropdown-menu inner "
+                                                                                                        role="presentation"
+                                                                                                        style="margin-top: 0px; margin-bottom: 0px;">
+                                                                                                        <li
+                                                                                                            class="selected active">
+                                                                                                            <a role="option"
+                                                                                                                id="bs-select-11-0"
+                                                                                                                tabindex="0"
+                                                                                                                aria-setsize="3"
+                                                                                                                aria-posinset="1"
+                                                                                                                class="active selected"
+                                                                                                                aria-selected="true"><span
+                                                                                                                    class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                    class="text"></span></a>
+                                                                                                        </li>
+                                                                                                        <li><a role="option"
+                                                                                                                id="bs-select-11-1"
+                                                                                                                tabindex="0"><span
+                                                                                                                    class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                    class="text">Products</span></a>
+                                                                                                        </li>
+                                                                                                        <li><a role="option"
+                                                                                                                id="bs-select-11-2"
+                                                                                                                tabindex="0"><span
+                                                                                                                    class="glyphicon glyphicon-ok check-mark"></span><span
+                                                                                                                    class="text">Services</span></a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn grey btn-outline-secondary"
+                                                                                data-dismiss="modal">Close</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-outline-primary">Save
+                                                                                changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                        <div class="col-md-8 d-flex  justify-content-end">
+                                                            <div class="form-group ">
+                                                                <label class=" label-control">Show quantity
+                                                                    as:</label>
+                                                                <div>
+                                                                    <div class="input-group ">
+                                                                        <div
+                                                                            class="d-inline-block custom-control custom-radio mr-1">
+                                                                            <input type="radio" name="customer1"
+                                                                                class="custom-control-input" checked
+                                                                                id="yes">
+                                                                            <label class="custom-control-label"
+                                                                                for="yes">Yes</label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="d-inline-block custom-control custom-radio mr-1">
+                                                                            <input type="radio" name="customer1"
+                                                                                class="custom-control-input" id="no">
+                                                                            <label class="custom-control-label"
+                                                                                for="no">No</label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="d-inline-block custom-control custom-radio">
+                                                                            <input type="radio" name="customer1"
+                                                                                class="custom-control-input" id="no">
+                                                                            <label class="custom-control-label"
+                                                                                for="no">No</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th scope="col" width="20%">Item</th>
+                                                            <th scope="col" width="25%">Description</th>
+                                                            <th scope="col" width="10%">Qty</th>
+                                                            <th scope="col" width="15%">Rate</th>
+                                                            <th scope="col" width="20%">Tax</th>
+                                                            <th scope="col" width="10%">Amount</th>
+                                                            <th><i class="fa fa-cog"></i></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td><textarea name="description" rows="4"
+                                                                    class="form-control"
+                                                                    placeholder="Description"></textarea></td>
+                                                            <td> <textarea name="long_description" rows="4"
+                                                                    class="form-control"
+                                                                    placeholder="Long description"></textarea>
+                                                            </td>
+                                                            <td><input type="number" name="quantity" min="0" value="1"
+                                                                    class="form-control" placeholder="Quantity"
+                                                                    aria-invalid="false">
+                                                                <input type="text" placeholder="Unit"
+                                                                    data-toggle="tooltip" 612=""
+                                                                    data-title="e.q kg, lots, packs" name="unit"
+                                                                    class="form-control border-0 p-2 text-right "
+                                                                    data-original-title="" title="">
+                                                            </td>
+                                                            <td><input type="number" name="rate" class="form-control"
+                                                                    placeholder="Rate"></td>
+                                                            <td><select class="select2 form-control"
+                                                                    multiple="multiple">
+
+                                                                    <option></option>
+                                                                    <option>5.00% <small class="text-muted">TAX3</small>
+                                                                    </option>
+                                                                    <option>10.00% <small
+                                                                            class="text-muted">TAX2</small></option>
+                                                                    <option>18.00% <small
+                                                                            class="text-muted">TAX1</small></option>
+
+                                                                </select></td>
+                                                            <td></td>
+                                                            <td><button type="button"
+                                                                    onclick="add_item_to_table('undefined','undefined',undefined); return false;"
+                                                                    class="btn pull-right btn-primary"><i
+                                                                        class="fa fa-check"></i></button></td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                                <hr class="col-12">
+                                                <div class="col-md-12">
+                                                    <div class="invoice-total">
+                                                        <div class="row justify-content-between">
+                                                            <div class="col-md-4">
+
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <ul class="list-group cost-list">
+                                                                    <li
+                                                                        class="list-group-item each-cost border-0 p-50 d-flex justify-content-between">
+                                                                        <span class="cost-title mr-2">Subtotal </span>
+                                                                        <span class="cost-value">$ 00.00</span>
+                                                                    </li>
+                                                                    <li class="dropdown-divider"></li>
+                                                                    <li
+                                                                        class="list-group-item each-cost border-0 p-50 d-flex justify-content-between">
+                                                                        <span class="cost-title mr-2">Discount </span>
+                                                                        <fieldset>
+                                                                            <div class="input-group">
+                                                                                <input type="number"
+                                                                                    data-toggle="tooltip"
+                                                                                    data-title="The number in the input field is not formatted while edit/add item and should remain not formatted do not try to format it manually in here."
+                                                                                    value="0"
+                                                                                    class="form-control pull-left"
+                                                                                    name="adjustment"
+                                                                                    data-original-title="" title=""
+                                                                                    aria-invalid="false">
+                                                                                <div class="input-group-append"
+                                                                                    id="button-addon2">
+                                                                                    <select
+                                                                                        class="select2 form-control">
+
+
+                                                                                        <option value="AK">%</option>
+                                                                                        <option value="HI">Fixed Ammount
+                                                                                        </option>
+
+
+                                                                                    </select>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </fieldset>
+                                                                        <span class="cost-value">-$ 00.00</span>
+                                                                    </li>
+                                                                    <li class="dropdown-divider"></li>
+                                                                    <li
+                                                                        class="list-group-item each-cost border-0 p-50 d-flex justify-content-between">
+                                                                        <span class="cost-title mr-2">Adjustment </span>
+                                                                        <div class="col-md-5">
+                                                                            <input type="number" data-toggle="tooltip"
+                                                                                data-title="The number in the input field is not formatted while edit/add item and should remain not formatted do not try to format it manually in here."
+                                                                                value="0" class="form-control pull-left"
+                                                                                name="adjustment" data-original-title=""
+                                                                                title="" aria-invalid="false">
+                                                                        </div>
+                                                                        <span class="cost-value">$ 0.00</span>
+                                                                    </li>
+                                                                    <li class="dropdown-divider"></li>
+                                                                    <li
+                                                                        class="list-group-item each-cost border-0 p-50 d-flex justify-content-between">
+                                                                        <span class="cost-title mr-2">Total </span>
+                                                                        <span class="cost-value">$ 00.00</span>
+                                                                    </li>
+
+                                                                </ul>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+                                            </div>
+
+
+                                            <div class="form-actions right">
+                                                <button type="reset" class="btn btn-warning mr-1">
+                                                    <i class="feather icon-x"></i> Cancel
+                                                </button>
+                                                <button type="submit" class="btn btn-primary">
+                                                    <i class="fa fa-check-square-o"></i> Save
+                                                </button>
+                                            </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        </section>
+        <!-- // Basic form layout section end -->
+
+        <script>
+            $(document).ready(function () {
+                $('#related').on('change', function () {
+                    var id = $(this).val();
+                    if (!id) {
+                        $("#lead_div").hide();
+                        $("#customer_div").hide();
+                        $("#lead").attr('required', false);
+                        $("#customer").attr('required', false);
+
+
+                        return false;
+                    }
+
+                    if (id == 'lead') {
+                        $("#lead_div").show();
+                        $("#lead").attr('required', true);
+                        $("#customer").attr('required', false);
+                        $("#customer_div").hide();
+                    } else if (id == 'customer') {
+                        $("#lead_div").hide();
+                        $("#customer_div").show();
+                        $("#lead").attr('required', false);
+                        $("#customer").attr('required', true);
+                    }
+                });
+
+                $('.custom_date').pickadate();
+            })
+        </script>
+
+        <!-- BEGIN: Vendor JS-->
+        <script src="app-assets/vendors/js/vendors.min.js"></script>
+        <!-- BEGIN Vendor JS-->
+
+        <!-- BEGIN: Page Vendor JS-->
+        <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+        <script src="app-assets/vendors/js/charts/leaflet/leaflet.js"></script>
+        <script src="app-assets/vendors/js/forms/icheck/icheck.min.js"></script>
+        <script src="app-assets/vendors/js/extensions/jquery.knob.min.js"></script>
+        <script src="app-assets/vendors/js/charts/raphael-min.js"></script>
+        <script src="app-assets/vendors/js/charts/morris.min.js"></script>
+        <script src="app-assets/vendors/js/charts/jquery.sparkline.min.js"></script>
+        <script src="app-assets/vendors/js/extensions/unslider-min.js"></script>
+        <script src="app-assets/vendors/js/charts/apexcharts/apexcharts.min.js"></script>
+        <script src="app-assets/vendors/js/pickers/dateTime/moment-with-locales.min.js"></script>
+        <script src="app-assets/vendors/js/pickers/dateTime/bootstrap-datetimepicker.min.js"></script>
+        <script src="app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+        <script src="app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+        <script src="app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
+        <script src="app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
+        <script src="app-assets/vendors/js/pickers/daterange/daterangepicker.js"></script>
+
+        <!-- END: Page Vendor JS-->
+
+        <!-- BEGIN: Theme JS-->
+        <script src="app-assets/js/core/app-menu.js"></script>
+        <script src="app-assets/js/core/app.js"></script>
+        <!-- END: Theme JS-->
+
+        <!-- BEGIN: Page JS-->
+        <script src="app-assets/js/scripts/pages/dashboard-fitness.js"></script>
+        <script src="app-assets/js/scripts/pickers/dateTime/bootstrap-datetime.js"></script>
+        <script src="app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js"></script>
+        <!-- END: Page JS-->
+
+        <script>
+            $(document).ready(function () {
+                $('.select2').select2();
+            })
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('.datepicker').datepicker();
+            });
+        </script>
+
+</body>
+
+</html>
