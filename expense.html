@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new customer</title>
+    <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/selects/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/ui/prism.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/file-uploaders/dropzone.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/daterange/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/datetime/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/pickadate/pickadate.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/file-uploaders/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/pickers/daterange/daterange.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v1">
+    <!-- END: Custom CSS-->
+    
+</head>
+
+<body>
+    <div class="rounded p-3 m-3">
+        <form action="form">
+            <div class="row match-height">
+                <div class="col-md-6">
+                    <h4 class="card-title" id="basic-layout-tooltip">Add new Expense</h4>
+                    <div class="card">
+                       
+                        <div class="card-content collapse show">
+                            <div class="card-body">
+
+                                
+
+                                <form class="form">
+                                    <div class="form-body">
+
+                                        <div class="card-content collapse show">
+                                            <div class="card-body">
+                                               
+                                                <button id="select-files" class="btn btn-primary mb-1"><i class="icon-file2"></i> Click me to select files</button>
+                                                <form action="#" class="dropzone dropzone-area" id="dpz-btn-select-files"></form>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" id="name" class="form-control"  name="name" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Opened By">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="note">Note</label>
+                                            <textarea class="form-control" id="description" rows="4"></textarea>
+                                        </div>
+                                        <div class="form-group " style="flex-wrap: nowrap !important;">
+                                            <label for="note"><span class="text-danger">* </span>Expense Category</label>
+                                            <fieldset>
+                                                <div class="input-group">
+                                                    <select class="select2 form-control">
+
+                                                        <option value=""></option>
+                                                        <option value="AK">Alaska</option>
+                                                        <option value="HI">Hawaii</option>
+
+                                                        <option value="CA">California</option>
+                                                        <option value="NV">Nevada</option>
+                                                        <option value="OR">Oregon</option>
+                                                        <option value="WA">Washington</option>
+
+
+
+
+                                                    </select>
+                                                    <div class="input-group-append" id="button-addon2">
+                                                        <button class="btn btn-primary" type="button"
+                                                            data-toggle="modal"
+                                                            data-target="#default">+</button>
+
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="modal fade text-left" id="default" tabindex="-1"
+                                                            role="dialog" aria-labelledby="myModalLabel1"
+                                                            aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title" id="myModalLabel1">
+                                                                            New contract Type</h4>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+
+                                                                        <label for="name"><span class="text-danger">*
+                                                                            </span>Category Name</label>
+                                                                        <input type="text" id="name"
+                                                                            class="form-control" name="name" required>
+                                                                        <label for="catagorydescription">Category Description</label>
+                                                                        <textarea class="form-control" id="description" rows="4"></textarea>
+
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button"
+                                                                            class="btn grey btn-outline-secondary"
+                                                                            data-dismiss="modal">Close</button>
+                                                                        <button type="button"
+                                                                            class="btn btn-outline-primary">Save
+                                                                            changes</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                            
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="issueinput3"><span class="text-danger">* </span>Expense Date</label>
+                                            <input type="date" id="issueinput3" class="form-control" name="dateopened" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Date Opened">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="ammount"><span class="text-danger">* </span>Amount</label>
+                                            <input type="number" name="ammount" class="form-control">
+                                        </div>
+
+                                        
+
+                                        <div class="form-group">
+                                            <label for="issueinput8">Customer</label>
+                                            <select class="select2 form-control">
+
+                                                <option value=""></option>
+                                                <option value="AK">Alaska</option>
+                                                <option value="HI">Hawaii</option>
+
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="card-title" id="basic-layout-icons">Advanced Options</h4>
+                    <div class="card">
+                        
+                        <div class="card-content collapse show">
+                            <div class="card-body">
+
+                                
+
+                                <form class="form">
+                                    <div class="form-body">
+
+                                        <div class="form-group">
+                                            <label for="currency"> <span class="text-danger">* </span>Currency</label>
+                                            <select class="select2 form-control">
+
+                                                <option value=""></option>
+                                                <option value="AK">Doller</option>
+                                                <option value="HI">Euro</option>
+
+                                            </select>
+                                        </div>
+
+                                        
+
+                                    
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label" for="tax">Tax 1</label>
+                                                    <div class="select2 form-control" style="width: 100%;">
+                                                       
+                                                            <option value="">
+                                                            </option>
+                                                            <option value="3" data-subtext="TAX3">
+                                                                5.00%
+                                                            </option>
+                                                            <option value="2" data-subtext="TAX2">
+                                                                10.00%
+                                                            </option>
+                                                            <option value="1" data-subtext="TAX1">
+                                                                18.00%
+                                                            </option>
+                                                        </select>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label" for="tax2">Tax 2</label>
+                                                    <div class="select2 form-control" style="width: 100%;">
+                                                        
+                                                            <option value="">
+                                                            </option>
+                                                            <option value="3" data-subtext="TAX3">
+                                                                5.00%
+                                                            </option>
+                                                            <option value="2" data-subtext="TAX2">
+                                                                10.00%
+                                                            </option>
+                                                            <option value="1" data-subtext="TAX1">
+                                                                18.00%
+                                                            </option>
+                                                        </select>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="issueinput8">Payment Mode</label>
+                                                    <select class="select2 form-control">
+        
+                                                        <option value=""></option>
+                                                        <option value="AK">Bank</option>
+                                                        <option value="HI">Online</option>
+        
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="reference#">Reference #</label>
+                                                    <input type="text" id="reference#" class="form-control"  name="reference#e" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Opened By">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="issueinput8">Repeat every</label>
+                                            <select class="select2 form-control">
+
+                                                <option value=""></option>
+                                                <option value="AK">1 Week</option>
+                                                <option value="HI">2 week</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+        <div class="form-actions">
+            <button type="reset" class="btn btn-warning mr-1">
+                <i class="feather icon-x"></i> Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">
+                <i class="fa fa-check-square-o"></i> Save
+            </button>
+        </div>
+    </div>
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="app-assets/vendors/js/vendors.min.js"></script>
+    <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/dropzone.min.js"></script>
+    <script src="app-assets/vendors/js/ui/prism.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/dateTime/moment-with-locales.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/dateTime/bootstrap-datetimepicker.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
+    <script src="app-assets/vendors/js/pickers/daterange/daterangepicker.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="app-assets/js/core/app-menu.js"></script>
+    <script src="app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/navs/navs.js"></script>
+    <script src="app-assets/js/scripts/forms/select/form-select2.js"></script>
+    <script src="app-assets/js/scripts/extensions/dropzone.js"></script>
+    <script src="path/to/dropzone.min.js"></script>
+    <script src="app-assets/js/scripts/pickers/dateTime/bootstrap-datetime.js"></script>
+    <script src="app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js"></script>
+    <!-- END: Page JS-->
+</body>
+
+</html>
